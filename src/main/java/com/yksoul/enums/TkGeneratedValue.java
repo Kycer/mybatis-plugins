@@ -5,10 +5,10 @@ package com.yksoul.enums;
  * @version 1.0 Date: 2018-01-26
  */
 public enum TkGeneratedValue {
-    JDBC("generator = \"JDBC\""),
-    IDENTITY("strategy = GenerationType.IDENTITY"),
-    UUID("generator = \"UUID\""),
-    ORACLE("strategy = GenerationType.IDENTITY, generator = \"select SEQ_ID.nextval from dual\"");
+    JDBC("@GeneratedValue(generator = \"JDBC\")"),
+    IDENTITY("@GeneratedValue(strategy = GenerationType.IDENTITY)"),
+    UUID("@GeneratedValue(generator = \"UUID\")"),
+    ORACLE("@GeneratedValue(strategy = GenerationType.IDENTITY, generator = \"{0}\")");
 
     private String value;
 

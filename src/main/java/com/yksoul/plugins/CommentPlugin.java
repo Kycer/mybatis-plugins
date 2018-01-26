@@ -21,7 +21,7 @@ import java.util.Properties;
 public class CommentPlugin extends PluginAdapter {
 
     private static String author = "yksoul";
-    private static String version = "V1.0.0";
+    private static String version = "V1.0";
 
     private static final String UNDERLINE = "_";
 
@@ -105,6 +105,7 @@ public class CommentPlugin extends PluginAdapter {
         CommentGenerator commentGenerator = context.getCommentGenerator();
         Properties properties = new Properties();
         properties.setProperty("suppressAllComments", "true");
+        properties.setProperty("suppressDate", "true");
         commentGenerator.addConfigurationProperties(properties);
     }
 
